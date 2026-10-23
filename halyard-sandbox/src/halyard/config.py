@@ -5,7 +5,7 @@ Values here can be overridden in halyard.yml or with CLI flags.
 
 DEFAULTS = {
     # Seconds before a single file scan is abandoned
-    "timeout": 30,
+    "timeout": 60,
     # How many directory levels deep to scan
     "max_depth": 8,
     # Supported output formats
