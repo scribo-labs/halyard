@@ -12,7 +12,7 @@ halyard scan [--path PATH] [--format FORMAT] [--timeout SECONDS] [--min-severity
 |---|---|---|
 | `--path` | `.` | Directory to scan |
 | `--format` | `text` | `text`, `json`, or `sarif` |
-| `--timeout` | `30` | Seconds per file before the scan is abandoned |
+| `--timeout` | `60` | Seconds per file before the scan is abandoned |
 | `--min-severity` | `medium` | Lowest severity reported |
 | `--exclude` | none | Glob pattern to skip. Repeat for multiple patterns |
 
