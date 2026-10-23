@@ -4,7 +4,7 @@ Halyard scans your source code for hardcoded secrets such as API keys, tokens, a
 
 ## Prerequisites
 
-- Python 3.9 or later
+- Python 3.10 or later. Halyard 1.5 and later don't support Python 3.9; if you're on Python 3.9, use Halyard 1.4.
 - pip
 
 ## Install Halyard
