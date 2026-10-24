@@ -10,6 +10,8 @@ The baseline file, `halyard-baseline.json` in your project root by default, list
 
 When a baseline file exists, `halyard scan` loads it and suppresses every finding whose fingerprint is in it. The summary line counts new and baselined findings separately, for example `12 findings (3 new, 9 baselined)`. The scan fails only on new findings at or above `min_severity`.
 
+If you point Halyard at a baseline file that doesn't exist, for example because of a typo in the path, the scan prints a warning and continues without a baseline, so the missing file doesn't fail CI by itself but your accepted findings are no longer suppressed.
+
 Because the file path is part of the fingerprint, moving a baselined secret to another file creates a new finding.
 
 ## Create a baseline

@@ -20,6 +20,8 @@ halyard scan [--path PATH] [--format FORMAT] [--timeout SECONDS] [--min-severity
 
 If a baseline file exists, `halyard scan` suppresses every finding recorded in it and counts those findings separately in the summary line, for example `12 findings (3 new, 9 baselined)`. To set up a baseline, see [Adopt Halyard on an existing codebase](adopt-existing-codebase.md).
 
+If the baseline file given with `--baseline PATH` doesn't exist, Halyard prints `warning: baseline file not found, scanning without a baseline` and scans without a baseline. The missing file doesn't affect the exit code.
+
 `halyard scan` exits with `1` if it reports a new finding at or above `--min-severity`, and with `0` otherwise. Baselined findings never fail the scan.
 
 ## halyard baseline create
