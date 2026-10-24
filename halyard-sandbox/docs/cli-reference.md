@@ -15,7 +15,7 @@ halyard scan [--path PATH] [--format FORMAT] [--timeout SECONDS] [--min-severity
 | `--timeout` | `30` | Seconds per file before the scan is abandoned |
 | `--min-severity` | `medium` | Lowest severity reported |
 | `--exclude` | none | Glob pattern to skip. Repeat for multiple patterns |
-| `--baseline-file` | `halyard-baseline.json` | Baseline file to load. The default is in the project root |
+| `--baseline-file` | `.halyard-baseline.json` | Baseline file to load. The default is in the project root |
 | `--no-baseline` | off | Ignore the baseline file for this run and report every finding |
 
 If a baseline file exists, `halyard scan` suppresses every finding recorded in it and counts those findings separately in the summary line, for example `12 findings (3 new, 9 baselined)`. To set up a baseline, see [Adopt Halyard on an existing codebase](adopt-existing-codebase.md).

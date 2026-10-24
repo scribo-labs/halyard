@@ -6,7 +6,7 @@ This page assumes you've installed Halyard and run a scan. If you haven't, see [
 
 ## How a baseline works
 
-The baseline file, `halyard-baseline.json` in your project root by default, lists a fingerprint for each accepted finding. A fingerprint is a hash of the finding's rule ID, file path, and matched text.
+The baseline file, `.halyard-baseline.json` in your project root by default, lists a fingerprint for each accepted finding. A fingerprint is a hash of the finding's rule ID, file path, and matched text.
 
 When a baseline file exists, `halyard scan` loads it and suppresses every finding whose fingerprint is in it. The summary line counts new and baselined findings separately, for example `12 findings (3 new, 9 baselined)`. The scan fails only on new findings at or above `min_severity`.
 
@@ -23,9 +23,9 @@ Because the file path is part of the fingerprint, moving a baselined secret to a
    halyard baseline create
    ```
 
-   Halyard writes every current finding to `halyard-baseline.json`.
+   Halyard writes every current finding to `.halyard-baseline.json`.
 
-3. Commit `halyard-baseline.json` to your repository so that CI and your teammates use the same baseline.
+3. Commit `.halyard-baseline.json` to your repository so that CI and your teammates use the same baseline. The file name starts with a dot, so it's hidden by default. Make sure your `.gitignore` doesn't exclude it.
 
 To keep the baseline somewhere else, set `baseline` in `halyard.yml`. See [Configure Halyard](configuration.md).
 
@@ -41,7 +41,7 @@ When your team reviews a new finding and decides to accept it, add it to the bas
 halyard baseline update
 ```
 
-Commit the updated `halyard-baseline.json`.
+Commit the updated `.halyard-baseline.json`.
 
 ## Review every finding
 
