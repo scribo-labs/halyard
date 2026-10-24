@@ -35,4 +35,5 @@ You should see `halyard 1.4.0`.
 ## Next steps
 
 - [Configure Halyard](configuration.md)
+- [Adopt Halyard on an existing codebase](adopt-existing-codebase.md)
 - [CLI reference](cli-reference.md)

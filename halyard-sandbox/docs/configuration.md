@@ -13,6 +13,7 @@ exclude:
   - node_modules/**
   - .git/**
   - "*.min.js"
+baseline: halyard-baseline.json
 ```
 
 ## Settings
@@ -24,3 +25,4 @@ exclude:
 | `format` | `text` | Output format: `text`, `json`, or `sarif` |
 | `min_severity` | `medium` | Lowest severity reported: `low`, `medium`, `high`, `critical` |
 | `exclude` | see above | Glob patterns to skip |
+| `baseline` | `halyard-baseline.json` | Path to the baseline file of accepted findings. See [Adopt Halyard on an existing codebase](adopt-existing-codebase.md) |
